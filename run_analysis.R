@@ -88,16 +88,16 @@ run_analysis <- function(type = "a")
   # Make a narrow melt data set using activity and subject as the id and the feature names as variables
   meltData <- melt(Data,id.vars = c("activity","subject"), measure.vars = feat, variable.name = "features",value.name="measure")
   
-  # 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+  # Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
   # using the the melt Data set. The condtion applied here is to find the individual mean for every subject and activity combination
   tidyData <- dcast(meltData,activity + subject ~features, mean, value.var = "measure");  
   
-  # 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+  # Extracts only the measurements on the mean and standard deviation for each measurement. 
   # Calculate the standard deviation and mean for every feature name from this data set.
   stddev <- ddply(meltData,.(features),summarize,stddeviation=sd(measure))
   avg <- ddply(meltData,.(features),summarize,mean=mean(measure))
   
- ## THe S.D. and mean of the matrix is merged into a single table  
+ ## The S.D. and mean of the matrix is merged into a single table  
   stdDevMean <-merge(stddev,avg,by = "features")
  # print(stdDevMean)  # prints mean and standard deviation for each measurement. 
 
