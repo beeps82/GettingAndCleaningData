@@ -32,5 +32,7 @@
  
 9. The melted data is cast back into the wide form which is the **Tidy Data Set**. The feaure column name represents the    477 features sorted by *subject* and *activity*. The aggregated mean for each feature was calculated for every      combination of subject and activity
 
-10. The aggregate Standard Deviation and mean for every feature irregardless of subject and activity is also calculated using the melted data set. The data is then merged using the *features*
+10. The aggregate Standard Deviation and mean for every feature irregardless of subject and activity is also calculated using the melted data set. The data is then merged using the *features* names. 
+ 
+
 
