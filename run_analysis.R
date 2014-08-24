@@ -1,14 +1,31 @@
 
-run_analysis <- function()
-{
-## Run_analysis function does the following 
-## 1) Merges the training and the test sets to create one data set.
-## 2) Extracts only the measurements on the mean and standard deviation for each measurement. 
-## 3) Uses descriptive activity names to name the activities in the data set
-## 4) Appropriately labels the data set with descriptive variable names. 
-## 5) Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
-#
-# #  This program assumes the user has already downloaded the necessary test and train data into their working folder.
+run_analysis <- function(type = "a")
+{  
+  ## The Run_analysis.R program here is a function
+  ## Includes a switch list to display individual Outputs as in the Assignment questions 1 to 5
+  ##
+  ##   Usage Example: 
+  ##          out <- run_analysis()
+  ##          out <- run_analysis("b") 
+  ##
+  ## The answers to the ASSINGMENT questions 1 to 5 are listed as "a" to "e" here
+  ##
+  ## Choose a character from "a","b","c","d" or "e" to view ONE of these outputs. 
+  ## The default output is the tidy Data set E.g. out<-run_analysis()   
+  ##
+  ## a)  Returns the merged training and the test sets to create one data set.
+  ##    E.g. out<- run_analysis("a")
+  ## b) Returns the measurements on the mean and standard deviation for each measurement. 
+  ##   E.g. out<- run_analysis("b")
+  ## c) Returns a list of descriptive activity names to name the activities in the data set
+  ##   E.g. out<- run_analysis("c")
+  ## d) Returns the label list in the data set with descriptive variable names. 
+  ##    E.g. out<- run_analysis("d")
+  ## e) Returns a second, independent tidy data set with the average of each variable for each activity and subject
+  ###   E.g. out<- run_analysis("e")  
+
+  
+  ##  This program assumes the user has already downloaded the necessary test and train data into their working folder.
   
   library(reshape2) 
   library(plyr)
@@ -82,6 +99,34 @@ run_analysis <- function()
   
  ## THe S.D. and mean of the matrix is merged into a single table  
   stdDevMean <-merge(stddev,avg,by = "features")
-  print(stdDevMean)  # prints mean and standard deviation for each measurement. 
-  return(tidyData)
+ # print(stdDevMean)  # prints mean and standard deviation for each measurement. 
+
+## Making a switch list to display individual Outputs as in the Assingment questions 1 to 5
+  switch (type,
+          a = {
+               message("Returning Tidy Data")
+               return(tidyData)
+               },
+          b = {
+               message("Returning Combined Data")
+               return(combinedData)
+              },
+          c = {
+               message("Returning Std Deviation and Mean")
+               return(stdDevMean)
+               },
+          d = {
+               message("List of activities")
+               return(unique(activity))
+               print(unique(activity))
+              },
+          e = {
+               message("List of feature vector names")
+               return(feat)
+               print(feat)
+              },
+          return(tidyData)
+          )
+
   }
+
