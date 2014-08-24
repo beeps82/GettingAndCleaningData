@@ -16,15 +16,13 @@
 
 4. The testActivity number labels are replaced with their string names. The hyphens and uppercase characters are also changed into lower case with no spaces in between. This makes it look cleaner.
 
-5. The featue vector list was then scanned for DUPLICATE entries. Out of the 561 feature vectors, there are 84 duplicate vectors. Using the "duplicated" command, these vectors were found and removed from the combined data list and feature list.
-
-E.g. the feature **fBodyAcc-bandsEnergy()-1,8** has 2 duplicate entries
-[List of the 84 duplicate features ](https://github.com/beeps82/GettingAndCleaningData/blob/master/duplicateFeatureList.md)
+5. The featue vector list was then scanned for DUPLICATE entries. Out of the 561 feature vectors, there are 84 duplicate vectors. Using the "duplicated" command, these vectors were found and removed from the combined data list and feature list.E.g. the feature **fBodyAcc-bandsEnergy()-1,8** has 2 duplicate entries [List of the 84 duplicate features ](https://github.com/beeps82/GettingAndCleaningData/blob/master/duplicateFeatureList.md)
 
 6. The cropped combined Data list now has the remaining 477 feautures. The feauture names were then edited to have
   *. lower case characters
   *. no brackets (), hyphens '-' 
-  *. abbreviations like t,f,gyro,accel were expanded
+  *. commas were converted to '_' 
+  *. abbreviations for t,f,gyro,accel were expanded
   
 The modified list of feature names. [List of the 477 feature names ](https://github.com/beeps82/GettingAndCleaningData/blob/master/featureNameList.md)
 
