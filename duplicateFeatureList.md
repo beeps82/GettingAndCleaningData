@@ -12,7 +12,7 @@
 10.	fBodyAcc-bandsEnergy()-17,32
 11.	fBodyAcc-bandsEnergy()-33,48
 12.	fBodyAcc-bandsEnergy()-49,64
-13.fBodyAcc-bandsEnergy()-1,24
+13. fBodyAcc-bandsEnergy()-1,24
 14.	fBodyAcc-bandsEnergy()-25,48
 15.	fBodyAcc-bandsEnergy()-1,8
 16.	fBodyAcc-bandsEnergy()-9,16
