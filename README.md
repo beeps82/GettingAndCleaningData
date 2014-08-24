@@ -21,21 +21,21 @@ This repo contains
 
  *. a) Returns the merged training and the test sets to create one data set.
  
-       E.g. *out<- run_analysis("a")*
+       E.g. out<- run_analysis("a")
        
  *. b) Returns the measurements on the mean and standard deviation for each measurement. 
  
-       E.g. *out<- run_analysis("b")*
+       E.g. out<- run_analysis("b")
        
  *. c) Returns a list of descriptive activity names to name the activities in the data set
  
-       E.g. *out<- run_analysis("c")*
+       E.g. out<- run_analysis("c")
        
  *. d) Returns the label list in the data set with descriptive variable names. 
  
-        E.g. *out<- run_analysis("d")*
+        E.g. out<- run_analysis("d")
         
  *. e) Returns a second, independent tidy data set with the average of each variable for each activity and subject
        
-       E.g. *out<- run_analysis("e")*
+       E.g. out<- run_analysis("e")
 
